@@ -114,8 +114,8 @@ app.post("/callback", (req, res) => {
          post_res.on('end', function(){
            console.log('S2S Response: ', response, "\n");
            var _results = JSON.parse(response);
-           //http://localhost:3000/viewBooking
-           res.redirect(`https://react-groceryapp.herokuapp.com/viewBooking?status=${_results.STATUS}&ORDERID=${_results.ORDERID}&date=${_results.TXNDATE}&bank=${_results.BANKNAME}`)
+           //http://localhost:3000/viewBooking  //https://react-groceryapp.herokuapp.com
+           res.redirect(`https://easy-grocery.netlify.app/viewBooking?status=${_results.STATUS}&ORDERID=${_results.ORDERID}&date=${_results.TXNDATE}&bank=${_results.BANKNAME}`)
            });
        });
 
